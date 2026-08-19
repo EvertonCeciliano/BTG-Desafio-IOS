@@ -1,24 +1,12 @@
-//
-//  ContentView.swift
-//  btg
-//
-//  Created by Everton Ceciliano on 18/08/26.
-//
-
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+struct ContentView: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UINavigationController {
+        let conversionVC = ConversionViewController()
+        let navController = UINavigationController(rootViewController: conversionVC)
+        navController.navigationBar.prefersLargeTitles = true
+        return navController
     }
-}
-
-#Preview {
-    ContentView()
+    
+    func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {}
 }

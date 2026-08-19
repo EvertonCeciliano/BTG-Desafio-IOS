@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		12E69E57303549CC0091CEE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12E69E2730351DEC0091CEE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 12E69E2E30351DEC0091CEE6;
+			remoteInfo = btg;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		12E69E2F30351DEC0091CEE6 /* btg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = btg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12E69E53303549CC0091CEE6 /* btgTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = btgTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = btg;
 			sourceTree = "<group>";
 		};
+		12E69E54303549CC0091CEE6 /* btgTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = btgTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		12E69E2C30351DEC0091CEE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12E69E50303549CC0091CEE6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				12E69E3130351DEC0091CEE6 /* btg */,
+				12E69E54303549CC0091CEE6 /* btgTests */,
 				12E69E3030351DEC0091CEE6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				12E69E2F30351DEC0091CEE6 /* btg.app */,
+				12E69E53303549CC0091CEE6 /* btgTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = 12E69E2F30351DEC0091CEE6 /* btg.app */;
 			productType = "com.apple.product-type.application";
 		};
+		12E69E52303549CC0091CEE6 /* btgTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12E69E59303549CC0091CEE6 /* Build configuration list for PBXNativeTarget "btgTests" */;
+			buildPhases = (
+				12E69E4F303549CC0091CEE6 /* Sources */,
+				12E69E50303549CC0091CEE6 /* Frameworks */,
+				12E69E51303549CC0091CEE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				12E69E58303549CC0091CEE6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				12E69E54303549CC0091CEE6 /* btgTests */,
+			);
+			name = btgTests;
+			packageProductDependencies = (
+			);
+			productName = btgTests;
+			productReference = 12E69E53303549CC0091CEE6 /* btgTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					12E69E2E30351DEC0091CEE6 = {
 						CreatedOnToolsVersion = 26.6;
+					};
+					12E69E52303549CC0091CEE6 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = 12E69E2E30351DEC0091CEE6;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				12E69E2E30351DEC0091CEE6 /* btg */,
+				12E69E52303549CC0091CEE6 /* btgTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		12E69E2D30351DEC0091CEE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12E69E51303549CC0091CEE6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		12E69E4F303549CC0091CEE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		12E69E58303549CC0091CEE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 12E69E2E30351DEC0091CEE6 /* btg */;
+			targetProxy = 12E69E57303549CC0091CEE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		12E69E3830351DEE0091CEE6 /* Debug */ = {
@@ -306,6 +381,46 @@
 			};
 			name = Release;
 		};
+		12E69E5A303549CC0091CEE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app1.btgTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/btg.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/btg";
+			};
+			name = Debug;
+		};
+		12E69E5B303549CC0091CEE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app1.btgTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/btg.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/btg";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -323,6 +438,15 @@
 			buildConfigurations = (
 				12E69E3B30351DEE0091CEE6 /* Debug */,
 				12E69E3C30351DEE0091CEE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		12E69E59303549CC0091CEE6 /* Build configuration list for PBXNativeTarget "btgTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12E69E5A303549CC0091CEE6 /* Debug */,
+				12E69E5B303549CC0091CEE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

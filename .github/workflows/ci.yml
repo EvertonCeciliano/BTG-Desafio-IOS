@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    name: Build & Test
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode 16
+        run: sudo xcode-select -s /Applications/Xcode_16.app
+
+      - name: Build & Test
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project btg.xcodeproj \
+            -scheme btg \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0' \
+            -enableCodeCoverage YES \
+            CODE_SIGNING_ALLOWED=NO \
+          | xcpretty
