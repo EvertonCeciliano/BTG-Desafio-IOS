@@ -24,6 +24,6 @@ jobs:
           xcodebuild build \
             -project btg.xcodeproj \
             -scheme btg \
-            -destination 'platform=macOS,arch=arm64,variant=Designed for iPad' \
+            -destination 'generic/platform=iOS Simulator' \
             CODE_SIGNING_ALLOWED=NO \
           | xcpretty
