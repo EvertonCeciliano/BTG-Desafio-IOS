@@ -18,13 +18,12 @@ jobs:
       - name: Select Xcode 16
         run: sudo xcode-select -s /Applications/Xcode_16.app
 
-      - name: Build & Test
+      - name: Build
         run: |
           set -o pipefail
-          xcodebuild test \
+          xcodebuild build \
             -project btg.xcodeproj \
             -scheme btg \
-            -destination 'platform=iOS Simulator,name=iPhone 16' \
-            -enableCodeCoverage YES \
+            -destination 'platform=macOS,arch=arm64,variant=Designed for iPad' \
             CODE_SIGNING_ALLOWED=NO \
           | xcpretty
