@@ -24,7 +24,7 @@ jobs:
           xcodebuild test \
             -project btg.xcodeproj \
             -scheme btg \
-            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0' \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
             -enableCodeCoverage YES \
             CODE_SIGNING_ALLOWED=NO \
           | xcpretty
